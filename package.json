@@ -1,0 +1,35 @@
+
+{
+    "name": "ultimate_tunes",
+    "version": "0.0.1",
+    "description": "A discord Bot made by CPS",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "keywords": [
+        "Ultimate Tunes"
+    ],
+    "author": "CPS",
+    "license": "MIT",
+    "dependencies": {
+        "@discordjs/rest": "^2.3.0",
+        "ascii-table": "^0.0.9",
+        "chalk": "^4.1.2",
+        "discord-api-types": "^0.37.92",
+        "discord.js": "^14.15.3",
+        "dotenv": "^16.4.5",
+        "fs": "^0.0.1-security",
+        "magmastream": "^2.5.9",
+        "moment": "^2.30.1",
+        "moment-timezone": "^0.5.45",
+        "mongoose": "^8.5.1",
+        "ms": "^2.1.3",
+        "rest": "^2.0.0",
+        "ultimate_tunes": "file:"
+    },
+    "engines": {
+    "node": ">=20.0.0"
+    }
+}

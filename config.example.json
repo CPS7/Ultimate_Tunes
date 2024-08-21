@@ -1,0 +1,23 @@
+{
+    "clientId": "",
+    "prefix": "!",
+    "messages": {
+        "COOLDOWN_MESSAGE": "You are on <duration> cooldown!"
+    },
+    "ownerID": [""], //put owner's user id here
+    "adminId": [""], //put user id of people you want to make admin
+    "uri": "", //Enter your mongo uri here
+    "nodes": [
+        {
+            "host": "",   //your lavalink ip here
+            "identifier": "",//name your lavalink anything
+            "password": "youshouldpass", //password of your lavalink
+            "port": 12345, //port
+            "retryAmount": 1000,
+            "retrydelay": 10000,
+            "resumeStatus": true,
+            "resumeTimeout": 1000,
+            "secure": false
+              }
+    ]
+}
