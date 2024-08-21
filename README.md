@@ -83,13 +83,13 @@ Before starting with the installation, you need to have the following:
 1. Clone the Ultimate Tunes repository:
 
 ```bash
-git clone https://github.com/CPS7/Ultimate-Tunes.git
+git clone https://github.com/CPS7/Ultimate_Tunes.git
 ```
 
 2. Change to the Ultimate Tunes directory:
 
 ```bash
-cd Ultimate-Tunes
+cd Ultimate_Tunes
 ```
 
 3. Install the required packages:
