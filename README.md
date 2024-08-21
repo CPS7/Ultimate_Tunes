@@ -130,7 +130,7 @@ Thank you for your interest in contributing to Ultimate Tunes! Here are some gui
 Your contribution will be reviewed by the project maintainers, and any necessary feedback or changes will be discussed with you. We appreciate your help in making Ultimate Tunes better!
 
 
-[version-shield]: https://img.shields.io/github/package-json/v/CPS7/Ultimate-Tunes?style=for-the-badge
+[version-shield]: https://img.shields.io/github/package-json/v/CPS7/Ultimate_Tunes?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/CPS7/Ultimate-Tunes.svg?style=for-the-badge
 [contributors-url]: https://github.com/CPS7/Ultimate-Tunes/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/CPS7/Ultimate-Tunes.svg?style=for-the-badge
