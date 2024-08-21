@@ -77,6 +77,11 @@ Before starting with the installation, you need to have the following:
 - ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) [Recommend LTS or higher](https://nodejs.org/)
 - ![Lavalink](https://img.shields.io/badge/Lavalink-7289DA?style=for-the-badge&logo=discord&logoColor=white) [v4 or higher](https://github.com/lavalink-devs/lavalink)
 - ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) [Required for database](https://www.mongodb.com/try/download/community)
+  
+## ⚙️ Guide
+
+For advanced installation and config guide, please check out the **Wiki** tab or [Click Here!](https://github.com/CPS7/Ultimate_Tunes/wiki)
+
 
 ## 🚀 Installation from source
 
