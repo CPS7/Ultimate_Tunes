@@ -129,6 +129,9 @@ Thank you for your interest in contributing to Ultimate Tunes! Here are some gui
 4. Submit a pull request with your changes.
 Your contribution will be reviewed by the project maintainers, and any necessary feedback or changes will be discussed with you. We appreciate your help in making Ultimate Tunes better!
 
+## NOTE
+The code uses the latest version of modules and dependencies to ensure compatibility and the latest features.
+
 
 [version-shield]: https://img.shields.io/github/package-json/v/CPS7/Ultimate_Tunes?style=for-the-badge
 [contributors-shield]: https://img.shields.io/github/contributors/CPS7/Ultimate-Tunes.svg?style=for-the-badge
