@@ -134,11 +134,11 @@ The code uses the latest version of modules and dependencies to ensure compatibi
 
 
 [version-shield]: https://img.shields.io/github/package-json/v/CPS7/Ultimate_Tunes?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/CPS7/Ultimate-Tunes.svg?style=for-the-badge
-[contributors-url]: https://github.com/CPS7/Ultimate-Tunes/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/CPS7/Ultimate-Tunes.svg?style=for-the-badge
-[forks-url]: https://github.com/CPS7/Ultimate-Tunes/network/members
-[stars-shield]: https://img.shields.io/github/stars/CPS7/Ultimate-Tunes.svg?style=for-the-badge
-[stars-url]: https://github.com/CPS7/Ultimate-Tunes/stargazers
-[issues-shield]: https://img.shields.io/github/issues/CPS7/Ultimate-Tunes.svg?style=for-the-badge
-[issues-url]: https://github.com/CPS7/Ultimate-Tunes/issues
+[contributors-shield]: https://img.shields.io/github/contributors/CPS7/Ultimate_Tunes.svg?style=for-the-badge
+[contributors-url]: https://github.com/CPS7/Ultimate_Tunes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/CPS7/Ultimate_Tunes.svg?style=for-the-badge
+[forks-url]: https://github.com/CPS7/Ultimate_Tunes/network/members
+[stars-shield]: https://img.shields.io/github/stars/CPS7/Ultimate_Tunes.svg?style=for-the-badge
+[stars-url]: https://github.com/CPS7/Ultimate_Tunes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/CPS7/Ultimate_Tunes.svg?style=for-the-badge
+[issues-url]: https://github.com/CPS7/Ultimate_Tunes/issues
