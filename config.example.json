@@ -1,23 +1,23 @@
 {
-    "clientId": "",
+    "clientId": "YOUR_CLIENT_ID_HERE",
     "prefix": "!",
     "messages": {
         "COOLDOWN_MESSAGE": "You are on <duration> cooldown!"
     },
-    "ownerID": [""], //put owner's user id here
-    "adminId": [""], //put user id of people you want to make admin
-    "uri": "", //Enter your mongo uri here
+    "ownerID": ["YOUR_USER_ID_HERE"],
+    "adminId": ["ADMIN_USER_ID_HERE"],
+    "uri": "YOUR_MONGO_URI_HERE",
     "nodes": [
         {
-            "host": "",   //your lavalink ip here
-            "identifier": "",//name your lavalink anything
-            "password": "youshouldpass", //password of your lavalink
-            "port": 12345, //port
+            "host": "YOUR_LAVALINK_HOST_HERE",
+            "identifier": "YOUR_LAVALINK_IDENTIFIER_HERE",
+            "password": "YOUR_LAVALINK_PASSWORD_HERE",
+            "port": 2333,
             "retryAmount": 1000,
             "retrydelay": 10000,
             "resumeStatus": true,
             "resumeTimeout": 1000,
             "secure": false
-              }
+        }
     ]
 }
