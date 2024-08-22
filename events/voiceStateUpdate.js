@@ -53,19 +53,39 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
   let guildData = await Guild.findOne({ guildId: newState.guild.id });
 
   // Handle bot being muted
-  if (newState.member.id === client.user.id && newState.serverMute) {
-    console.log("Bot has been server-muted.");
-    if (guildData && playeropt) {
-      const textChannel = await client.channels.fetch(playeropt.textChannelId);
-      if (textChannel && textChannel.type === ChannelType.GuildText) {
-        try {
-          await textChannel.send("I got muted.");
-        } catch (error) {
-          console.error("Failed to send message:", error);
+  if (newState.member.id === client.user.id) {
+    const player = client.manager.get(newState.guild.id);
+
+    if (player) {
+        const textChannel = await client.channels.fetch(player.textChannel);
+
+        if (textChannel && textChannel.type === ChannelType.GuildText) {
+            // If the bot was muted and is now unmuted
+            if (oldState.serverMute && !newState.serverMute) {
+                console.log("Bot has been server-unmuted.");
+                await textChannel.send({
+                    embeds: [
+                        new EmbedBuilder()
+                            .setColor("Blue")
+                            .setDescription(`I am server unmuted.`),
+                    ],
+                });
+            }
+
+            // If the bot is currently muted
+            if (newState.serverMute) {
+                console.log("Bot has been server-muted.");
+                await textChannel.send({
+                    embeds: [
+                        new EmbedBuilder()
+                            .setColor("Red")
+                            .setDescription(`I got server muted.`),
+                    ],
+                });
+            }
         }
-      }
     }
-  }
+}
 
   // Handle bot alone in voice channel
   if (

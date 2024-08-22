@@ -6,6 +6,7 @@ module.exports = {
     description: "Toggles 24/7 mode",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'utility',
     options: [
         {
             name: 'mode',

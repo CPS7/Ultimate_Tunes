@@ -5,7 +5,8 @@ module.exports = {
     name: 'prefix',
     description: "Changes prefix for specific server",
     cooldown: 3000,
-    usage: '<prefix>prefix <string>',
+    usage: '<prefix>prefix <newprefix>',
+    category: 'utility',
     userPerms: [PermissionsBitField.Flags.Administrator],
     run: async(client, message, args) => {
         const prefix = args[0];

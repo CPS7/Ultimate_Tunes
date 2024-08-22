@@ -3,6 +3,10 @@ const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = r
 module.exports = {
     name: "seek",
     description: "Seeks to a specific position in the current track.",
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     type: ApplicationCommandType.ChatInput,
     options: [
         {
@@ -15,13 +19,6 @@ module.exports = {
     run: async (client, interaction) => {
         const player = interaction.client.manager.players.get(interaction.guild.id);
         const timeInput = interaction.options.getString("timestamp");
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("I am not connected to any Voice Channel.");
-            return interaction.reply({ embeds: [embed], ephemeral: true });
-        }
 
         if (!player.queue.current) {
             const embed = new EmbedBuilder()

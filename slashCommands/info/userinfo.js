@@ -11,6 +11,7 @@ module.exports = {
         type: ApplicationCommandOptionType.User,
         required: true
     }],
+    category: 'info',
     run: async(client, interaction) => {
         const user = interaction.options.getMember('user');
 

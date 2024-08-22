@@ -4,6 +4,7 @@ module.exports = {
     usage: '<prefix>eval <string>',
     onlyOwner: true,
     cooldown: 3000,
+    category: "owner",
     run: async(client, message, args) => {
         if (!args.length) {
             return message.channel.send('Please provide the code to evaluate.');

@@ -13,6 +13,23 @@ const { getGuildSettings } = require('./utils/getGuildSettings');
 const { isSetupChannelMessage } = require('./utils/isSetupChannelMessage');
 const { UserSettings } = require('./utils/getUser');
 const { isPremium } = require('./utils/isPremium')
+const http = require("http")
+
+if(config.alwaysOnlineReplit) {
+    const PORT = process.env.PORT || 9600;
+    const httpServer = http.createServer(
+      function(request, response) {
+        const value = response.socket;
+        response.end("Socket buffersize : " + value.bufferSize, 'utf8', () => {
+           console.log("displaying the result...");
+        })
+     });
+    httpServer.listen(PORT, () => {
+      console.log("Server is running at port 9600...");
+    });
+    const v = httpServer.keepAliveTimeout
+    console.log('keep alive time out value :-' + v)
+}
 
 const client = new Client({
     allowedMentions: {

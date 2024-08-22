@@ -5,6 +5,8 @@ module.exports = {
     description: "Check bot's ping.",
     cooldown: 3000,
     userPerms: [],
+    category: 'info',
+    usage: "<prefix>ping",
     botPerms: [],
     run: async(client, message, args) => {
 

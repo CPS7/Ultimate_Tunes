@@ -10,6 +10,9 @@ module.exports = {
         type: ApplicationCommandOptionType.String,
         required: true
     }],
+    sameVoiceChannel:true,
+    category: "music",
+    
     run: async (client, interaction) => {
         if (!interaction.guild || !interaction.guildId) return;
         if (!interaction.replied || interaction.deferred) {

@@ -4,7 +4,8 @@ module.exports = {
     name: 'avatar',
     description: "Display user's avatar",
     cooldown: 3000,
-    usage: '<@user>',
+    usage: '<prefix>avatar [@user]',
+    category: 'utility',
     run: async(client, message, args) => {
         const mention = message.mentions.users.first();
 

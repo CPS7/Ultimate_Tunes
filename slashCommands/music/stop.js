@@ -7,18 +7,16 @@ module.exports = {
     description: "Stop songs",
     type: ApplicationCommandType.ChatInput,
     cooldown:3000,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     run: async (client, interaction) => {
         const playeropt = await Player.findOne({ guildId: interaction.guildId });
         if (!interaction.guild || !interaction.guildId) return;
 
         const player = client.manager.players.get(interaction.guild.id);
 
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('There is no music currently playing.');
-            return await interaction.reply({ embeds: [embed], ephemeral: true });
-        }
 
         const currentTrack = player.queue.current;
         const requester = currentTrack ? currentTrack.requester : null;

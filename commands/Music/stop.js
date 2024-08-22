@@ -10,16 +10,14 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases: ["s", "st"],
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>stop",
     run: async (client, message, args) => {
         const playeropt = await Player.findOne({ guildId: message.guild.id });
         const player = client.manager.players.get(message.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription('There is no music currently playing.');
-            return await message.reply({ embeds: [embed] });
-        }
 
         const currentTrack = player.queue.current;
         const requester = currentTrack ? currentTrack.requester : null;

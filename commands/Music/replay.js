@@ -9,15 +9,13 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases:["r","rp"],
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>replay",
     run: async(client, message, args) => {
         const player = client.manager.players.get(message.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('There is no music currently playing to replay.');
-            return message.channel.send({ embeds: [embed] });
-        }
 
         const currentTrack = player.queue.current;
         const requester = currentTrack.requester;

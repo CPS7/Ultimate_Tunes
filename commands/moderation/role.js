@@ -7,6 +7,7 @@ module.exports = {
     usage: "<prefix>role add @rolename @username>",
     botPerm: ['MANAGE_ROLES'], // Permissions the bot needs
     userPerm: ['MANAGE_ROLES'], // Permissions the user needs
+    category: 'moderation',
     run: async(client, message, args) => {
         // Check if the bot has the required permissions
         if (!message.guild.members.me.permissions.has(this.botPerm)) {

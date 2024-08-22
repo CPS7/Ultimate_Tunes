@@ -8,16 +8,13 @@ module.exports = {
     description: "Skip songs",
     type: ApplicationCommandType.ChatInput,
     cooldown:3000,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     run: async (client, interaction) => {
         const player = interaction.client.manager.players.get(interaction.guild.id);
         
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('No player is active in this server.');
-            return await interaction.reply({embeds: [embed], ephemeral: true});
-        }
-
         const currentTrack = player.queue.current;
         const requester = currentTrack.requester;
 

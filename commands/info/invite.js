@@ -3,7 +3,9 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder } = require('discord.js');
 module.exports = {
     name: 'invite',
     description: "Get the bot's invite link",
-    cooldown: 5,
+    cooldown: 3000,
+    category: 'info',
+    usage: "<prefix>invite",
     run: async(client, message, args) => {
         const servers = client.guilds.cache.size;
         const inviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;

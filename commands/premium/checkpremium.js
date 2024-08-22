@@ -8,6 +8,7 @@ module.exports = {
     description: "The language to set (e.g., en, es).",
     cooldown: 3000,
     usage: '<prefix>premium <user>',
+    category: "premium",
     run: async(client, message, args) => {
         let member = message.mentions.members.first();
 

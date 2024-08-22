@@ -6,6 +6,7 @@ module.exports = {
     description: "Toggles 24/7 mode",
     cooldown: 3000,
     usage: '<prefix>247 <enable|disable>',
+    category: 'utility',
     run: async (client, message, args) => {
         const mode = args[0];
 

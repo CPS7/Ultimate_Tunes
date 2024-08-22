@@ -1,9 +1,13 @@
 const { EmbedBuilder, PermissionsBitField } = require('discord.js');
 const moment = require('moment');
+const { cooldown } = require('./invite');
 
 module.exports = {
     name: "userinfo",
     description: "Shows information about a user",
+    cooldown: 3000,
+    category: 'info',
+    usage: "<prefix>userinfo [@user]",
     run: async(client, message, args) => {
         // Extract user mentioned or use message author
         const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;

@@ -6,6 +6,7 @@ module.exports = {
     description: "Changes prefix for specefic server",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'utility',
     default_member_permissions: 'Administrator',
     options: [{
         name: 'prefix',
