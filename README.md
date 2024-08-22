@@ -16,7 +16,7 @@
     <br />
     <a href="https://discord.com/oauth2/authorize?client_id=1265294248409038849&scope=bot+applications.commands&permissions=8">Invite Ultimate_Tunes</a>
     ·
-    <a href="https://github.com/CPS7/Ultimate-Tunes/issues">Report Bug & Request Feature</a>
+    <a href="https://github.com/CPS7/Ultimate_Tunes/issues">Report Bug & Request Feature</a>
   </p>
 </p>
 
