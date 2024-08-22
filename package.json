@@ -1,6 +1,6 @@
 {
     "name": "ultimate_tunes",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A discord Bot made by CPS",
     "main": "index.js",
     "scripts": {
