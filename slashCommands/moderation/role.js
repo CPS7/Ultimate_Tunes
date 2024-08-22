@@ -5,6 +5,8 @@ module.exports = {
     description: "Manage roles of the server or members.",
     type: ApplicationCommandType.ChatInput,
     default_member_permissions: 'ManageRoles',
+    cooldown: 3000,
+    category: 'moderation',
     options: [{
         name: 'add',
         description: 'Add role to a user.',

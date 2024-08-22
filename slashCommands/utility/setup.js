@@ -5,6 +5,7 @@ module.exports = {
     description: "Creates or deletes setup",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'utility',
         options: [
             {
                 name: 'action',

@@ -6,6 +6,7 @@ module.exports = {
     description: "Display user's premium status",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: "premium",
     options: [{
         name: 'user',
         description: 'The user to check premium status for',

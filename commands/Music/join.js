@@ -1,4 +1,5 @@
 const { EmbedBuilder } = require("discord.js");
+const { sameVoiceChannel } = require("./play");
 
 module.exports = {
     name: 'join',
@@ -7,6 +8,9 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases: ["j","jn"],
+    sameVoiceChannel: true,
+    category: "music",
+    usage: "<prefix>join",
     run: async (client, message, args) => {
 
         if (!message.member.voice.channel) {

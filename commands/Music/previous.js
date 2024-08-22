@@ -9,16 +9,14 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases: ["prev","pr"],
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>previous",
     run: async (client, message, args) => {
 
         const player = message.client.manager.players.get(message.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('No player is active in this server.');
-            return await message.channel.send({ embeds: [embed] });
-        }
 
         // Check if there's a previous track available
         const currentTrack = player.queue.current;

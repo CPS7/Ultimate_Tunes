@@ -3,6 +3,7 @@ const { SlashCommandBuilder, ApplicationCommandOptionType, ApplicationCommandTyp
 const User = require('../../models/users');
 const owner = ["727154675496779826", "1251063445869301784 "];
 const { adminOnly } = require('../../commands/owner/eval');
+const { category } = require('../info/help');
 
 module.exports = {
     name: 'addpremium',
@@ -11,6 +12,7 @@ module.exports = {
     cooldown: 3000,
     ownerOnly:true,
     adminOnly:true,
+    category: "owner",
     options: [
         {
             name: 'user',

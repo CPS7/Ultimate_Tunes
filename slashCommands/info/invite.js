@@ -8,6 +8,7 @@ module.exports = {
     type: ApplicationCommandType.ChatInput,
     userPerms: [],
     botPerms: [],
+    category: 'info',
     run: async(client, interaction) => {
         servers = client.guilds.cache.size
         const inviteUrl = `https://discord.com/api/oauth2/authorize?client_id=${process.env.CLIENT_ID}&permissions=8&scope=bot%20applications.commands`;

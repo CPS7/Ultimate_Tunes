@@ -4,16 +4,14 @@ module.exports = {
     name: "seek",
     description: "Seeks to a specific position in the current track.",
     cooldown: 3000, // Cooldown time in milliseconds
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>seek <0:00>",
     run: async (client, message, args) => {
         const player = message.client.manager.players.get(message.guild.id);
         const timeInput = args[0];
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("I am not connected to any Voice Channel.");
-            return message.channel.send({ embeds: [embed] });
-        }
 
         if (!player.queue.current) {
             const embed = new EmbedBuilder()

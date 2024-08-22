@@ -1,8 +1,14 @@
-const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
+const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require("discord.js");
+const { cooldown } = require("./disconnect");
 module.exports = {
     name: "join",
     description: "Join's vc",
     type: ApplicationCommandType.ChatInput,
+    category: 'music',
+    player: false,
+    playing: false,
+    sameVoiceChannel: true,
+    cooldown: 3000,
     run: async (client, interaction) => {
 
         if (!interaction.guild || !interaction.guildId) return;

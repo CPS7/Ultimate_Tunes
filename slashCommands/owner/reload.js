@@ -12,6 +12,7 @@ module.exports = {
     cooldown: 3000,
     ownerOnly:true,
     adminOnly:true,
+    category: "owner",
     options: [{
         name: 'commands',
         description: 'The command you want to reload.',

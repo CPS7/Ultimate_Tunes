@@ -7,16 +7,13 @@ module.exports = {
     description: "Replay the previous track",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     run: async (client, interaction) => {
 
         const player = interaction.client.manager.players.get(interaction.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('No player is active in this server.');
-            return await interaction.reply({ embeds: [embed], ephemeral: true });
-        }
 
         // Check if there's a previous track available
         const currentTrack = player.queue.current;

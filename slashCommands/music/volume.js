@@ -4,6 +4,11 @@ module.exports = {
     name: "volume",
     description: "Controls the volume of the bot",
     type: ApplicationCommandType.ChatInput,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
+    cooldown: 3000,
     options: [
         {
             name: 'level',
@@ -41,12 +46,6 @@ module.exports = {
 
         // Retrieve the player
         const player = client.manager.players.get(guild.id);
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('There is no music currently playing.');
-            return interaction.editReply({ embeds: [embed] });
-        }
 
         // Get the volume level from the interaction options
         const volume = options.getInteger('level');

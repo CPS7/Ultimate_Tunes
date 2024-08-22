@@ -8,12 +8,9 @@ module.exports = {
     usage: '<prefix>addpremium <@user> <plan> <duration>',
     onlyOwner: true,
     cooldown: 3000,
+    category: "owner",
     run: async (client, message, args) => {
         // Check if the command user is an owner
-        const ownerIDs = ["727154675496779826", "1251063445869301784"]; // Ensure these are correct owner IDs
-        if (!ownerIDs.includes(message.author.id)) {
-            return message.reply("You are not authorized to use this command.");
-        }
 
         const member = message.mentions.members.first();
         if (!member) {

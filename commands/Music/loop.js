@@ -1,11 +1,17 @@
 const { EmbedBuilder } = require("discord.js");
 const Player = require("../../models/player");
+const { sameVoiceChannel } = require("./play");
 
 module.exports = {
     name: "loop",
     description: "Put the current song on loop",
     cooldown: 3000,
     usage: '<prefix>loop <enable|disable>',
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>loop",
     run: async (client, message, args) => {
         const mode = args[0];
 
@@ -17,20 +23,6 @@ module.exports = {
         }
 
         const player = client.manager.players.get(message.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("I am not connected to any Voice Channel.");
-            return message.reply({ embeds: [embed] });
-        }
-
-        if (!player.playing) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("No song is playing right now.");
-            return message.reply({ embeds: [embed] });
-        }
 
         if (mode === 'enable') {
             player.trackRepeat = true

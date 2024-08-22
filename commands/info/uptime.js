@@ -4,6 +4,8 @@ module.exports = {
     name: 'uptime',
     description: "Check the bot's latest uptime",
     cooldown: 3000,
+    category: 'info',
+    usage: "<prefix>uptime",
     run: async(client, message, args) => {
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);

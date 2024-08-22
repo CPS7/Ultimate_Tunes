@@ -5,6 +5,7 @@ module.exports = {
     description: "Display user's avatar",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'utility',
     options: [{
         name: 'user',
         description: 'The avatar of the user you want to display.',

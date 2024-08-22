@@ -10,15 +10,13 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases: ["sk"],
+    playing: true,
+    player: true,
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>skip",
     run: async (client, message, args) => {
         const player = message.client.manager.players.get(message.guild.id);
-
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('No player is active in this server.');
-            return await message.channel.send({ embeds: [embed] });
-        }
 
         const currentTrack = player.queue.current;
         if (!currentTrack) {

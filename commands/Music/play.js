@@ -11,20 +11,13 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases:["p","pl"],
+    sameVoiceChannel:true,
+    category: "music",
+    usage: "<prefix>play <songname>",
     run: async(client, message, args) => {
         if (!message.member.voice.channel) return message.reply('you need to join a voice channel.');
         if (!args.length) return message.reply('you need to give me a URL or a search term.');
         const botCurrentVoiceChannelId = message.client.user.voiceChannel
-
-        if (
-            botCurrentVoiceChannelId &&
-            member.voice.channelId &&
-            member.voice.channelId !== botCurrentVoiceChannelId
-          ) {
-            return await message.reply({
-              content: `You must be connnected to the same voice channel as me to use this command. <#${botCurrentVoiceChannelId}>`,
-            });
-          }
 
         const player = client.manager.create({
             guild: message.guildId,

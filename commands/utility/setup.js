@@ -8,6 +8,7 @@ module.exports = {
     cooldown: 3000,
     usage: '<prefix>setup <create|delete>',
     aliases: ["set"],
+    category: 'utility',
     userPerms: [PermissionsBitField.Flags.ManageChannels],
     run: async (client, message, args) => {
         const guildId = message.guild.id;

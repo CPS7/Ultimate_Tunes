@@ -7,6 +7,10 @@ module.exports = {
     description: "Replay the current track",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     run: async (client, interaction) => {
         if (!interaction.guild || !interaction.guildId) return;
 
@@ -16,12 +20,6 @@ module.exports = {
 
         const player = interaction.client.manager.players.get(interaction.guild.id);
 
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FF0000')
-                .setDescription('There is no music currently playing to replay.');
-            return await interaction.editReply({ embeds: [embed] });
-        }
 
         const currentTrack = player.queue.current;
         const requester = currentTrack.requester;

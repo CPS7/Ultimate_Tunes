@@ -7,6 +7,11 @@ module.exports = {
     userPerms: [],
     botPerms: [],
     aliases: ["v", "vl", "vol"],
+    playing: true,
+    player: true,
+    sameVoiceChannel:false,
+    category: "music",
+    usage: "<prefix>vol <100>",
     run: async (client, message, args) => {
         // Check if the user is in a voice channel
         if (!message.member.voice.channel) {

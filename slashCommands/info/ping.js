@@ -5,6 +5,7 @@ module.exports = {
     description: "Check bot's ping.",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'info',
     run: async(client, interaction) => {
         await interaction.deferReply();
         const embed = new EmbedBuilder()

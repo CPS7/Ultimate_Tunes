@@ -6,6 +6,10 @@ module.exports = {
     name: "loop",
     description: "put song on loop",
     cooldown:3000,
+    category: 'music',
+    player: true,
+    playing: true,
+    sameVoiceChannel: true,
     type: ApplicationCommandType.ChatInput,
     options: [
         {
@@ -29,19 +33,7 @@ module.exports = {
         const mode = interaction.options.getString('mode');
         const player = interaction.client.manager.players.get(interaction.guild.id);
 
-        if (!player) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("I am not connected to any Voice Channel.")
-            return interaction.reply({embeds: [embed]});
-        }
-
-        if (!player.playing) {
-            const embed = new EmbedBuilder()
-                .setColor('#FFD700')
-                .setDescription("NO song is playing right now.")
-            return interaction.reply({embeds: [embed]});
-        }
+    
         if (mode === 'enable') {
             player.trackRepeat = true
             const embed = new EmbedBuilder()

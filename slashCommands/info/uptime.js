@@ -4,6 +4,7 @@ module.exports = {
     description: "Check the bot's latest uptime",
     type: ApplicationCommandType.ChatInput,
     cooldown: 3000,
+    category: 'info',
     run: async(client, interaction) => {
         let totalSeconds = (client.uptime / 1000);
         let hours = Math.floor(totalSeconds / 3600);
