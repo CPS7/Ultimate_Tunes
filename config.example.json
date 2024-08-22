@@ -7,7 +7,7 @@
     "ownerID": ["YOUR_USER_ID_HERE"],
     "adminId": ["ADMIN_USER_ID_HERE"],
     "uri": "YOUR_MONGO_URI_HERE",
-    "alwaysOnlineReplit": "true"
+    "alwaysOnlineReplit": "true",
     "nodes": [
         {
             "host": "YOUR_LAVALINK_HOST_HERE",
